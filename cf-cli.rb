@@ -9,7 +9,7 @@ class CfCli < Formula
 
   depends_on :arch => :x86_64
 
-  conflicts_with "cloudfoundry-cli", :because => "the Pivotal tap ships an older cli distribution"
+  conflicts_with "pivotal/tap/cloudfoundry-cli", :because => "the Pivotal tap ships an older cli distribution"
 
   def install
     bin.install 'cf'
