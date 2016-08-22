@@ -1,9 +1,9 @@
 class BoshInit < Formula
   desc "creates and updates the Director VM"
   homepage "https://github.com/cloudfoundry/bosh-init"
-  version "0.0.95"
+  version "0.0.96"
   url "https://s3.amazonaws.com/bosh-init-artifacts/bosh-init-#{version}-darwin-amd64"
-  sha256 "312b503bf545ef40cb72470392f9d356364a2c49441b24b1ec7f3bcdd48416a3"
+  sha256 "cb5f279f2ee19d9de1f54f041c0c2494878dbdf17b972251a8c391a3c2d7b982"
 
   depends_on :arch => :x86_64
 
