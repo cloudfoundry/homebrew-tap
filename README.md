@@ -15,3 +15,4 @@ Package|Description
 ---|---
 cf-cli|The official Cloud Foundry CLI
 bosh-init|The official CLI to create and update the BOSH Director VM
+bosh-cli|The new golang BOSH cli (alpha)
