@@ -11,6 +11,6 @@ class BoshCli < Formula
   end
 
   test do
-    system "#{bin}/bosh"
+    system "#{bin}/gosh --help"
   end
 end
