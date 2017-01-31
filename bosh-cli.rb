@@ -1,16 +1,19 @@
 class BoshCli < Formula
   desc "New BOSH CLI (beta)"
   homepage "https://bosh.io/docs/cli-v2.html"
-  version "0.0.151"
+  version "0.0.153"
   url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-amd64"
-  sha256 "c294af66374d9ca7810edaeb970a837464c30466a0b82aae8923d4088d047e43"
+  sha256 "29175c39ade93fe04ed979f60d1ca84a9856eb1b31c93aa58883a3f5cab820a9"
 
   depends_on :arch => :x86_64
 
+  option "without-gosh", "Don't rename binary to 'gosh'. Useful if the old Ruby CLI is not needed."
+
   def install
-    bin.install "bosh-cli-#{version}-darwin-amd64" => "gosh"
+    binary_name = build.without?("gosh") ? "bosh" : "gosh"
+    bin.install "bosh-cli-#{version}-darwin-amd64" => binary_name
     (bash_completion/"bosh-cli").write <<-completion
-      _gosh() {
+      _#{binary_name}() {
           # All arguments except the first one
           args=("${COMP_WORDS[@]:1:$COMP_CWORD}")
           # Only split on newlines
@@ -20,11 +23,11 @@ class BoshCli < Formula
           COMPREPLY=($(GO_FLAGS_COMPLETION=1 ${COMP_WORDS[0]} "${args[@]}"))
           return 0
       }
-      complete -F _gosh gosh
+      complete -F _#{binary_name} #{binary_name}
     completion
   end
 
   test do
-    system "#{bin}/gosh --help"
+    system "#{bin}/#{binary_name} --help"
   end
 end
