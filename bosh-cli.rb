@@ -1,16 +1,16 @@
 class BoshCli < Formula
   desc "New BOSH CLI (beta)"
   homepage "https://bosh.io/docs/cli-v2.html"
-  version "0.0.157"
+  version "0.0.158"
   url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-amd64"
-  sha256 "9cb3a21acc0c26fb8a9cdef52571b1946bf938b4a599f32601b5563e6873f7ec"
+  sha256 "790885fc96235c8fc2060f452ef47556c5b9e1d53a479e345a79b54002557823"
 
   depends_on :arch => :x86_64
 
-  option "without-gosh", "Don't rename binary to 'gosh'. Useful if the old Ruby CLI is not needed."
+  option "without-bosh2", "Don't rename binary to 'bosh2'. Useful if the old Ruby CLI is not needed."
 
   def install
-    binary_name = build.without?("gosh") ? "bosh" : "gosh"
+    binary_name = build.without?("bosh2") ? "bosh" : "bosh2"
     bin.install "bosh-cli-#{version}-darwin-amd64" => binary_name
     (bash_completion/"bosh-cli").write <<-completion
       _#{binary_name}() {
