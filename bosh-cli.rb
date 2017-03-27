@@ -1,9 +1,9 @@
 class BoshCli < Formula
   desc "New BOSH CLI (beta)"
   homepage "https://bosh.io/docs/cli-v2.html"
-  version "2.0.10"
+  version "2.0.13"
   url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-amd64"
-  sha256 "f5623719efb56db15061d1305a834a81b11cf027bf4aeb603242000652b6d453"
+  sha256 "f96be0ad2756785a51817eae6a004405737cdfd1a48497bb2acfd18bb520c71f"
 
   depends_on :arch => :x86_64
 
@@ -12,19 +12,6 @@ class BoshCli < Formula
   def install
     binary_name = build.without?("bosh2") ? "bosh" : "bosh2"
     bin.install "bosh-cli-#{version}-darwin-amd64" => binary_name
-    (bash_completion/"bosh-cli").write <<-completion
-      _#{binary_name}() {
-          # All arguments except the first one
-          args=("${COMP_WORDS[@]:1:$COMP_CWORD}")
-          # Only split on newlines
-          local IFS=$'\n'
-          # Call completion (note that the first element of COMP_WORDS is
-          # the executable itself)
-          COMPREPLY=($(GO_FLAGS_COMPLETION=1 ${COMP_WORDS[0]} "${args[@]}"))
-          return 0
-      }
-      complete -F _#{binary_name} #{binary_name}
-    completion
   end
 
   test do
