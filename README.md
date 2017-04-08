@@ -6,7 +6,7 @@ To install a package:
 
 ```
 brew tap cloudfoundry/tap
-brew install tap-name # e.g. cf-cli
+brew install <cf-cli | bosh-init | bosh-cli | credhub-cli>
 ```
 
 Available packages:
@@ -15,4 +15,5 @@ Package|Description
 ---|---
 cf-cli|The official Cloud Foundry CLI
 bosh-init|The official CLI to create and update the BOSH Director VM
-bosh-cli|The new BOSH CLI (beta), binary will be added as gosh to avoid conflicts with the old CLI.
+bosh-cli|The new BOSH CLI (beta), binary will be added as gosh to avoid conflicts with the old CLI
+credhub-cli|The official CredHub CLI
