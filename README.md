@@ -6,7 +6,7 @@ To install a package:
 
 ```
 brew tap cloudfoundry/tap
-brew install <cf-cli | bosh-init | bosh-cli | credhub-cli | bbl>
+brew install <cf-cli | bosh-init | bosh-cli | credhub-cli | bbl | concourse>
 ```
 
 Available packages:
@@ -18,3 +18,4 @@ bosh-init|The official CLI to create and update the BOSH Director VM
 bosh-cli|The new BOSH CLI (beta), binary will be added as gosh to avoid conflicts with the old CLI
 credhub-cli|The official CredHub CLI
 bbl|The official bosh-bootloader CLI
+concourse|The official concourse binary
