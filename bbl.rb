@@ -3,7 +3,7 @@ class Bbl < Formula
   homepage "https://github.com/cloudfoundry/bosh-bootloader"
   version "v4.1.3"
   url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_osx"
-  sha256 "5a93bd499552071e725629eadec81883f52a521b9783e85fc93517a8dd32d1a9"
+  sha256 "df3f1a729c70f897b963f3b235e2eb3715136721dd80c10ba09c15d5a63bc580"
 
   depends_on :arch => :x86_64
   depends_on "terraform" => "0.10.0"
