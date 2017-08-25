@@ -3,9 +3,9 @@ require 'formula'
 class CfCli < Formula
   homepage 'https://code.cloudfoundry.org/cli'
   head 'https://cli.run.pivotal.io/edge?arch=macosx64&source=homebrew'
-  url 'https://cli.run.pivotal.io/stable?release=macosx64-binary&version=6.29.1&source=homebrew'
-  version '6.29.1'
-  sha256 '9aec3a9dea08b2f81d0b9893f3bd870a6c27d3e7e6ebc8773ac062a29affaa32'
+  url 'https://cli.run.pivotal.io/stable?release=macosx64-binary&version=6.29.2&source=homebrew'
+  version '6.29.2'
+  sha256 '9ce3f8d85490bf999683334d367fc39eb24c652a57e26f8f62834176ce9e7eaf'
 
   depends_on :arch => :x86_64
 
