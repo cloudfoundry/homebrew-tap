@@ -6,8 +6,8 @@ class Bbl < Formula
   sha256 "c9c80bfd2af628ff22aaa91bc4cf878dbd3412fe6150d5f911c803aa9a973bd0"
 
   depends_on :arch => :x86_64
-  depends_on "terraform" => "0.10.0"
-  depends_on "cloudfoundry/tap/bosh-cli" => "2.0.29"
+  depends_on "terraform" => "0.10.2"
+  depends_on "cloudfoundry/tap/bosh-cli" => "2.0.33"
 
   def install
     binary_name = "bbl"
