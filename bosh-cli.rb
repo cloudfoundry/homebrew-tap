@@ -1,9 +1,9 @@
 class BoshCli < Formula
   desc "New BOSH CLI (beta)"
   homepage "https://bosh.io/docs/cli-v2.html"
-  version "2.0.33"
+  version "2.0.34"
   url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-amd64"
-  sha256 "d5434c50ba15230e07ef05ab8484cc86d59284194466858664c95b2bddba2d37"
+  sha256 "381b70743ecb4cf34efc995b2c749ed08362125ff2277b6cd12b106e62c047cc"
 
   depends_on :arch => :x86_64
 
