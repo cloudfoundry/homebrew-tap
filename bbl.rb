@@ -1,9 +1,9 @@
 class Bbl < Formula
   desc "Command line utility for standing up a BOSH director on an IAAS of your choice."
   homepage "https://github.com/cloudfoundry/bosh-bootloader"
-  version "v5.1.3"
+  version "v5.2.0"
   url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_osx"
-  sha256 "85eb676d63c2061d8108abbbf3f7a0cbbdf850b97ab2300e5adb4f2eaa82af9c"
+  sha256 "ccd085f03fd4098a1a4f7070f16f4d3a46d958d1cb74d8cb5ebe6c2cdacf4c3f"
 
   depends_on :arch => :x86_64
   depends_on "terraform" => "0.10.0"
