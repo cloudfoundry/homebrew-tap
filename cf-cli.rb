@@ -2,10 +2,17 @@ require 'formula'
 
 class CfCli < Formula
   homepage 'https://code.cloudfoundry.org/cli'
-  head 'https://cli.run.pivotal.io/edge?arch=macosx64&source=homebrew'
-  url 'https://cli.run.pivotal.io/stable?release=macosx64-binary&version=6.32.0&source=homebrew'
-  version '6.32.0'
-  sha256 'ddbe83ac8cfe6249431d5a50d5193d127d840fa592261b7050accc2b9757d727'
+  version '6.33.0'
+
+  if OS.mac?
+    head 'https://packages.cloudfoundry.org/edge?arch=macosx64&source=homebrew'
+    url 'https://packages.cloudfoundry.org/stable?release=macosx64-binary&version=6.33.0&source=homebrew'
+    sha256 '3ef382ba18ce7460e9f5a697d4742e358d5c04a3164191c626c0c6826b07a6b8'
+  elsif OS.linux?
+    head 'https://packages.cloudfoundry.org/edge?arch=linux64&source=homebrew'
+    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=6.33.0&source=homebrew'
+    sha256 '443b61459bed73571e987f5c09ac559278da68fffa62ebe521d770d00b8f5629'
+  end
 
   depends_on :arch => :x86_64
 
