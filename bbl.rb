@@ -6,7 +6,7 @@ class Bbl < Formula
   if OS.mac?
     url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_osx"
     sha256 "cfeeed876c02f59790373b5c2ddae456915846ab059d05c69c92c82bc4bd43f1"
-  elif OS.linux?
+  elsif OS.linux?
     url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_linux_x86-64"
     sha256 ""
   end
@@ -19,7 +19,7 @@ class Bbl < Formula
     binary_name = "bbl"
     if OS.mac?
       bin.install "bbl-#{version}_osx" => binary_name
-    elif OS.linux?
+    elsif OS.linux?
       bin.install "bbl-#{version}_linux_x86-64" => binary_name
     end
   end
