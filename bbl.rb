@@ -8,7 +8,7 @@ class Bbl < Formula
     sha256 "cfeeed876c02f59790373b5c2ddae456915846ab059d05c69c92c82bc4bd43f1"
   elsif OS.linux?
     url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_linux_x86-64"
-    sha256 ""
+    sha256 "8c811ad074946c333148d8ea20fda7e0841857c84630abc2173c29f3386330c0"
   end
 
   depends_on :arch => :x86_64
