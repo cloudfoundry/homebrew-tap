@@ -12,8 +12,8 @@ class Bbl < Formula
   end
 
   depends_on :arch => :x86_64
-  depends_on "terraform" => "0.10.0"
-  depends_on "cloudfoundry/tap/bosh-cli" => "2.0.29"
+  depends_on "terraform" => "0.11.0"
+  depends_on "cloudfoundry/tap/bosh-cli" => "2.0.48"
 
   def install
     binary_name = "bbl"
