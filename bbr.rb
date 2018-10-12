@@ -11,6 +11,6 @@ class Bbr < Formula
   end
 
   test do
-    system "#{bin}/bbr version"
+    system "#{bin}/bbr", "version"
   end
 end
