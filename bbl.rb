@@ -5,10 +5,10 @@ class Bbl < Formula
 
   if OS.mac?
     url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_osx"
-    sha256 "42a7c74d8b85300ee642a8e68077d7b65b8d1f0cdfc74a33e49a3069bb180087"
+    sha256 "d62710d0a9e65157f53e8e043c8e6ff355a9472fdceae4f2d5570f3361effb48"
   elsif OS.linux?
     url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_linux_x86-64"
-    sha256 "5cefef4381b2a07e9c447a3559e1f5e1958a3d3154f877f3d1aa1c8945e280c6"
+    sha256 "31fbe0676bdeefd1a1a96596067f22a4b53cb21858d764b8361995f8f87d3bc9"
   end
 
   depends_on :arch => :x86_64
