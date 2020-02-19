@@ -19,3 +19,9 @@ Available packages:
 | credhub-cli | The official CredHub CLI                                   |
 | bbl         | The official bosh-bootloader CLI                           |
 | bbr         | The official BOSH Backup and Restore CLI                   |
+
+Want to change something?
+ 1. Make a PR
+ 1. A Pivotal Tracker story will be created in the Toolsmiths tracker project
+ 1. Toolsmiths will move the story to the team who has the most context on the changes, the 'reviewing team'
+ 1. The 'reviewing team' will decide the best action to take, including merging/closing/editing the PR
