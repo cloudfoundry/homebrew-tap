@@ -1,6 +1,7 @@
 require 'formula'
 
 class Cf7Cli < Formula
+  desc "The official command line client for Cloud Foundry (v7)"
   homepage 'https://code.cloudfoundry.org/cli'
   version '7.0.0-beta.30'
 
