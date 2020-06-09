@@ -5,7 +5,7 @@ class CfCliAT6 < Formula
   head 'https://cli.run.pivotal.io/edge?arch=macosx64&source=homebrew'
   url 'https://cli.run.pivotal.io/stable?release=macosx64-binary&version=6.21.1&source=homebrew'
   version '6.21.1'
-  sha256 '347c70c4f537dff4315cbb42c33e8707a5ba180be74bd8a4a7621d7d56b6258e'
+  sha256 'd7f04b446e770a3d941cf3297184f0b37460972bfef8a17a5333b09d788b9c65'
 
   depends_on :arch => :x86_64
 
