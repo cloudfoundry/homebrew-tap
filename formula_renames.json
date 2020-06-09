@@ -1,3 +1,4 @@
 {
-  "cloudfoundry-cli": "cf-cli"
+  "cloudfoundry-cli": "cf-cli",
+  "cf7-cli": "cf-cli@7"
 }
