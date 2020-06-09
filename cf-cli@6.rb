@@ -2,16 +2,16 @@ require 'formula'
 
 class CfCliAT6 < Formula
   homepage 'https://code.cloudfoundry.org/cli'
-  version '6.34.0'
+  version '6.34.1'
 
   if OS.mac?
     head 'https://packages.cloudfoundry.org/edge?arch=macosx64&source=homebrew'
-    url 'https://packages.cloudfoundry.org/stable?release=macosx64-binary&version=6.34.0&source=homebrew'
-    sha256 '2ad9dcc7c272da7ac3f684823e1ae71945b04dcbe0a4c70fe70589d62956a3c2'
+    url 'https://packages.cloudfoundry.org/stable?release=macosx64-binary&version=6.34.1&source=homebrew'
+    sha256 '5f604d76b805f1a6e3c6cbad1a829b3f9fcbf677e9bf5fd53c341321fef56c1c'
   elsif OS.linux?
     head 'https://packages.cloudfoundry.org/edge?arch=linux64&source=homebrew'
-    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=6.34.0&source=homebrew'
-    sha256 'b9174b43007cb2cfc0e88a2304e1cc8434fd07b99f51e1b1278eecfa57dcf25f'
+    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=6.34.1&source=homebrew'
+    sha256 '95f25b19ad7645124752072b595ae9e7df66fc7fb48f633b63e7d9d7a9e0b1bc'
   end
 
   depends_on :arch => :x86_64
