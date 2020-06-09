@@ -14,8 +14,8 @@ class CfCliAT6 < Formula
 
   def install
     bin.install 'cf'
-    (bash_completion/"cf-cli").write <<-completion
-      _cf-cli() {
+    (bash_completion/"cf").write <<-completion
+      _cf() {
           # All arguments except the first one
           args=("${COMP_WORDS[@]:1:$COMP_CWORD}")
           # Only split on newlines
@@ -25,7 +25,7 @@ class CfCliAT6 < Formula
           COMPREPLY=($(GO_FLAGS_COMPLETION=1 ${COMP_WORDS[0]} "${args[@]}"))
           return 0
       }
-      complete -F _cf-cli cf
+      complete -F _cf cf
     completion
     doc.install 'LICENSE'
     doc.install 'NOTICE'
