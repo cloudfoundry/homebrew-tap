@@ -3,9 +3,14 @@ require 'formula'
 class CfCliAT6 < Formula
   homepage 'https://code.cloudfoundry.org/cli'
   head 'https://cli.run.pivotal.io/edge?arch=macosx64&source=homebrew'
-  url 'https://cli.run.pivotal.io/stable?release=macosx64-binary&version=6.32.0&source=homebrew'
   version '6.32.0'
-  sha256 'ddbe83ac8cfe6249431d5a50d5193d127d840fa592261b7050accc2b9757d727'
+  if OS.mac?
+    url 'https://cli.run.pivotal.io/stable?release=macosx64-binary&version=6.32.0&source=homebrew'
+    sha256 'ddbe83ac8cfe6249431d5a50d5193d127d840fa592261b7050accc2b9757d727'
+  elsif OS.linux?
+    url 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.32.0&source=homebrew'
+    sha256 '0a05521b7198dc8b92efbfb02a8fb04c84eeffeded3387aa3c9eb92ce4abef69'
+  end
 
   depends_on :arch => :x86_64
 
