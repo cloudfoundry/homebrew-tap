@@ -2,19 +2,22 @@ require 'formula'
 
 class CfCliAT6 < Formula
   homepage 'https://code.cloudfoundry.org/cli'
-  version '6.33.0'
+  version '6.33.1'
 
   if OS.mac?
     head 'https://packages.cloudfoundry.org/edge?arch=macosx64&source=homebrew'
-    url 'https://packages.cloudfoundry.org/stable?release=macosx64-binary&version=6.33.0&source=homebrew'
-    sha256 '3ef382ba18ce7460e9f5a697d4742e358d5c04a3164191c626c0c6826b07a6b8'
+    url 'https://packages.cloudfoundry.org/stable?release=macosx64-binary&version=6.33.1&source=homebrew'
+    sha256 '3721ae9956e3b623500d81b670a4467e73485be0e3855c48c167c7085beb83bf'
   elsif OS.linux?
     head 'https://packages.cloudfoundry.org/edge?arch=linux64&source=homebrew'
-    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=6.33.0&source=homebrew'
-    sha256 '443b61459bed73571e987f5c09ac559278da68fffa62ebe521d770d00b8f5629'
+    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=6.33.1&source=homebrew'
+    sha256 '09b19125d73f9eb1ffca22eeb62ee62b224180e37a2c8ff0a1a63a9325a04e04'
   end
 
   depends_on :arch => :x86_64
+
+  conflicts_with "pivotal/tap/cloudfoundry-cli", :because => "the Pivotal tap ships an older cli distribution"
+  conflicts_with "caskroom/cask/cloudfoundry-cli", :because => "the caskroom tap is not the official distribution"
 
   def install
     bin.install 'cf'
