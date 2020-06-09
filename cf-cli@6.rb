@@ -6,7 +6,7 @@ class CfCliAT6 < Formula
 
   if OS.mac?
     head 'https://packages.cloudfoundry.org/edge?arch=macosx64&source=homebrew'
-    url 'https://packages.cloudfoundry.org/stable?release=macosx64-binary&version=6.38.0&source=homebrew'
+    url 'https://packages.cloudfoundry.org/homebrew/cf-6.38.0.tgz'
     sha256 '0f7f78a9b4cdfc12b373f61269cc86285b6f56f8458538b35a8d38a3437d0ff2'
   elsif OS.linux?
     head 'https://packages.cloudfoundry.org/edge?arch=linux64&source=homebrew'
