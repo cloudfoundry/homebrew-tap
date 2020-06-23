@@ -1,6 +1,6 @@
 require 'formula'
 
-class Cf7CliAT7 < Formula
+class CfCliAT7 < Formula
   homepage 'https://code.cloudfoundry.org/cli'
   version '7.0.0'
 
