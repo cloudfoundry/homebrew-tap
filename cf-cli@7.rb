@@ -1,16 +1,15 @@
 require 'formula'
 
-class CfCliAT7 < Formula
-  desc "The official command line client for Cloud Foundry (v7)"
+class Cf7CliAT7 < Formula
   homepage 'https://code.cloudfoundry.org/cli'
-  version '7.0.0-beta.30'
+  version '7.0.0'
 
   if OS.mac?
-    url 'https://packages.cloudfoundry.org/homebrew/cf7-7.0.0-beta.30.tgz'
-    sha256 '859e08755ba43b22af28f81a2b21bd0aaec01883d60732c012c13c98f698ebe9'
+    url 'https://packages.cloudfoundry.org/homebrew/cf7-7.0.0.tgz'
+    sha256 '3f06fb1066b912545a150ee570af04f0a1c3ff7a7414c461e42342d80adfbfab'
   elsif OS.linux?
-    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.0.0-beta.30&source=homebrew'
-    sha256 '8b9dc187d4fa73dfc416df73737f5e2008b7dcc746d14fc891b54da8143dc7b2'
+    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.0.0&source=homebrew'
+    sha256 '3f06fb1066b912545a150ee570af04f0a1c3ff7a7414c461e42342d80adfbfab'
   end
 
   depends_on :arch => :x86_64
@@ -31,6 +30,7 @@ _cf-cli() {
     return 0
 }
 complete -F _cf-cli cf7
+complete -F _cf-cli cf
     completion
     doc.install 'LICENSE'
     doc.install 'NOTICE'
