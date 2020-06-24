@@ -16,6 +16,7 @@ class CfCliAT7 < Formula
 
   def install
     bin.install 'cf7'
+    bin.install_symlink 'cf7' => 'cf'
     (bash_completion/"cf7-cli").write <<-completion
 # bash completion for Cloud Foundry CLI
 
