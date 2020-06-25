@@ -6,10 +6,10 @@ class CfCliAT7 < Formula
 
   if OS.mac?
     url 'https://packages.cloudfoundry.org/homebrew/cf7-7.0.0.tgz'
-    sha256 '22d08ab06e8868fd5f6f36d1408dcdaaf37ebad8b6d4719f0c703131e0ae358f'
+    sha256 'c45768c4a1f8d33cb1a6eccb5c1afec9e7bbd136edf32b4da992e6e9c6b50f60'
   elsif OS.linux?
     url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.0.0&source=homebrew'
-    sha256 '71b4426531ba0de0c1beaa4cd12a278c6f02dfb6a59e62e80faf162c9b8351fd'
+    sha256 '7f23be34b55c8b6c47ea18b41dd1fbf8b5d23ba3ac219bbc08bd80d782a8d497'
   end
 
   depends_on :arch => :x86_64
