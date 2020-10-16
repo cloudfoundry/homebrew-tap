@@ -25,5 +25,3 @@ Want to change something?
  1. A Pivotal Tracker story will be created in the Toolsmiths tracker project
  1. Toolsmiths will move the story to the team who has the most context on the changes, the 'reviewing team'
  1. The 'reviewing team' will decide the best action to take, including merging/closing/editing the PR
-
-test
