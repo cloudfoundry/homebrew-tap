@@ -1,14 +1,14 @@
 class BoshCli < Formula
   desc "BOSH CLI"
   homepage "https://bosh.io/docs/cli-v2.html"
-  version "6.4.0"
+  version "6.4.1"
 
   if OS.mac?
     url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-amd64"
-    sha256 "d176c2c69a86a410cafa8aba7adee51531689ed23feb47fa2aa72766b716039f"
+    sha256 "d752f205a7d1d82f135a96bc08aafe5aaad95c1bfb5f2dd2abcae90619182487"
   elsif OS.linux?
     url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-linux-amd64"
-    sha256 "b438168934858a43b5a47ef3e44a6f10be3212930542a788a10c3e4bd008c50d"
+    sha256 "756d8e403f1d349ef3766d28980379c24da6212fa45dcf296c0519d4ec54d66a"
   end
 
   depends_on :arch => :x86_64
