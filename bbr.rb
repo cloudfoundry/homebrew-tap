@@ -1,8 +1,8 @@
 class Bbr < Formula
   desc "BOSH Backup and Restore CLI"
   homepage "https://github.com/cloudfoundry-incubator/bosh-backup-and-restore"
-  url "https://github.com/cloudfoundry-incubator/bosh-backup-and-restore/releases/download/v1.9.13/bbr-1.9.13.tar"
-  sha256 "af1846e1e8f63d290bc197b649adaf746b030dd022e958079e6a7aa78494a6c2"
+  url "https://github.com/cloudfoundry-incubator/bosh-backup-and-restore/releases/download/v1.9.14/bbr-1.9.14.tar"
+  sha256 "4c49ab3ca21fea2d06516f110b76b5c0863ea40c226e865292876cffb153f906"
 
   depends_on :arch => :x86_64
 
