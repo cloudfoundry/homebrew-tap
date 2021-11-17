@@ -2,14 +2,14 @@ require 'formula'
 
 class CfCliAT7 < Formula
   homepage 'https://code.cloudfoundry.org/cli'
-  version '7.3.0'
+  version '7.4.0'
 
   if OS.mac?
-    url 'https://packages.cloudfoundry.org/homebrew/cf7-7.3.0.tgz'
-    sha256 '6b71ab87e9e95ba63323ac811608e4e370610c60d97931d1ee26821c3fbb11b9'
+    url 'https://packages.cloudfoundry.org/homebrew/cf7-7.4.0.tgz'
+    sha256 '487cd7ae758c53b607cc55736557740b829c6d679490bdaa138ae3def36be5e4'
   elsif OS.linux?
-    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.3.0&source=homebrew'
-    sha256 '7a78614b2bb58e633d9488a357871c3ce2cc1b70b08f3e56d2bb9c82505565f9'
+    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.4.0&source=homebrew'
+    sha256 '6ac44598c580fe24c98f3b52df2e6357116478c68dee5c74800cb39cba421695'
   end
 
   depends_on :arch => :x86_64
