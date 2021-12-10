@@ -1,24 +1,31 @@
 class BoshCli < Formula
   desc "BOSH CLI"
   homepage "https://bosh.io/docs/cli-v2.html"
-  version "6.4.8"
+  version "6.4.9"
 
   if OS.mac?
-    url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-amd64"
-    sha256 "8badba2d501c04d0b1fa0f0b4ea2d180d97609815b0cace50fd5a62127daa131"
+    if Hardware::CPU.arm?
+      url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-arm64"
+      sha256 ""
+    else
+      url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-amd64"
+      sha256 "5eada85f815b2e9dc177bcfecc86bf17463e772378b456938ff3531a59d793c5"
+    end
   elsif OS.linux?
     url "https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-#{version}-linux-amd64"
-    sha256 "71896833a35f83a2f26ea60597151445e57ec29d653756abc37ab42dacbb7f3d"
+    sha256 "bbf5f0a8b5312effa60755b02c6b2f1cbcabd6cbdd9a2bdbbd71ca2507436f6d"
   end
-
-  depends_on :arch => :x86_64
 
   option "with-bosh2", "Rename binary to 'bosh2'. Useful if the old Ruby CLI is needed."
 
   def install
     binary_name = build.with?("bosh2") ? "bosh2" : "bosh"
     if OS.mac?
-      bin.install "bosh-cli-#{version}-darwin-amd64" => binary_name
+      if Hardware::CPU.arm?
+        bin.install "bosh-cli-#{version}-darwin-arm64" => binary_name
+      else
+        bin.install "bosh-cli-#{version}-darwin-amd64" => binary_name
+      end
     elsif OS.linux?
       bin.install "bosh-cli-#{version}-linux-amd64" => binary_name
     end
