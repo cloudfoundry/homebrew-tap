@@ -6,10 +6,10 @@ class CfCliAT8 < Formula
 
   if OS.mac?
     url 'https://packages.cloudfoundry.org/homebrew/cf8-8.1.0.tgz'
-    sha256 '2f5f343c8d2ab3374c1bf39031fa080104641f4c385dc6c27d7360fa34a71d36'
+    sha256 'f534f7edc531d4cb43fd9ef216faf2a764ac6fda907216dd4f2299d8f1d7352f'
   elsif OS.linux?
     url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=8.1.0&source=homebrew'
-    sha256 '2bc4c178b47bed712422d94399a6cc9acc92d21c6a640392ec7181b0c1bce5d0'
+    sha256 'dadbb24dba7ef41f935b72f70d66b9b9c78df1781f67682ad0c116be92644693'
   end
 
   depends_on :arch => :x86_64
