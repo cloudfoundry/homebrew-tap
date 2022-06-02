@@ -10,7 +10,6 @@ class CfCliAT8 < Formula
       sha256 '156261838e3e65d52b5d9eea3f2c53113a6bab05349494cd8f0f7d6e06398e29'
     elsif
       url 'https://packages.cloudfoundry.org/homebrew?arch=macosx64&version=8.4.0'
-      url 'https://packages.cloudfoundry.org/homebrew/cf8-8.4.0.tgz'
       sha256 'a0e70eb848c4526eb4e4a2b32b71b2746a9e8e2fba9e62e5ccb33d94ddab4904'
     end
   elsif OS.linux?
