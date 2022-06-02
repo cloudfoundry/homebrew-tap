@@ -2,17 +2,21 @@ require 'formula'
 
 class CfCliAT8 < Formula
   homepage 'https://code.cloudfoundry.org/cli'
-  version '8.3.0'
+  version '8.4.0'
 
   if OS.mac?
-    url 'https://packages.cloudfoundry.org/homebrew/cf8-8.3.0.tgz'
-    sha256 '390d12106309a93cb78bc687fcdfd123f06bdcf954708abb47861f8fe1c213bc'
+    if Hardware::CPU.arm?
+      url 'https://packages.cloudfoundry.org/homebrew?arch=macosarm&version=8.4.0'
+      sha256 '156261838e3e65d52b5d9eea3f2c53113a6bab05349494cd8f0f7d6e06398e29'
+    elsif
+      url 'https://packages.cloudfoundry.org/homebrew?arch=macosx64&version=8.4.0'
+      url 'https://packages.cloudfoundry.org/homebrew/cf8-8.4.0.tgz'
+      sha256 'a0e70eb848c4526eb4e4a2b32b71b2746a9e8e2fba9e62e5ccb33d94ddab4904'
+    end
   elsif OS.linux?
-    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=8.3.0&source=homebrew'
-    sha256 '5d2e9b1ef129a84a63f2fc6c429146c7b23ea8dba172a8b1c6f1cb1c8867eb0e'
+    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=8.4.0&source=homebrew'
+    sha256 'a104a06e2b4ab6b9c7d28b625274e44ec48c2b9b27a7ccca4db50b570a007310'
   end
-
-  depends_on :arch => :x86_64
 
   def install
     bin.install 'cf8'
