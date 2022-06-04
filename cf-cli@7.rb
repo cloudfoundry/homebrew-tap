@@ -1,22 +1,24 @@
-require 'formula'
-
 class CfCliAT7 < Formula
-  homepage 'https://code.cloudfoundry.org/cli'
-  version '7.4.0'
+  desc     "Cloud Foundry CLI"
+  homepage "https://code.cloudfoundry.org/cli"
+  version  "7.5.0"
 
   if OS.mac?
-    url 'https://packages.cloudfoundry.org/homebrew/cf7-7.4.0.tgz'
-    sha256 '487cd7ae758c53b607cc55736557740b829c6d679490bdaa138ae3def36be5e4'
+    if Hardware::CPU.arm?
+      url "https://packages.cloudfoundry.org/homebrew?arch=macosarm&version=7.5.0"
+      sha256 "94707f45977dae68edcb2645e389862b19ee2ebbac1761dc380989933783e545"
+    elsif
+      url "https://packages.cloudfoundry.org/homebrew?arch=macosx64&version=7.5.0"
+      sha256 "15e6f37f015c0feb5c965439214eaed644a2b6393980329ff6b7f29fadac1ed4"
+    end
   elsif OS.linux?
-    url 'https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.4.0&source=homebrew'
-    sha256 '6ac44598c580fe24c98f3b52df2e6357116478c68dee5c74800cb39cba421695'
+    url "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.5.0&source=homebrew"
+    sha256 "a9bb76258178613c31c2bfbe65391e5dda80e5dcf1c6e2f36c4d8d3cf96b82a9"
   end
 
-  depends_on :arch => :x86_64
-
   def install
-    bin.install 'cf7'
-    bin.install_symlink 'cf7' => 'cf'
+    bin.install "cf7"
+    bin.install_symlink "cf7" => "cf"
     (bash_completion/"cf7-cli").write <<-completion
 # bash completion for Cloud Foundry CLI
 
@@ -33,8 +35,8 @@ _cf-cli() {
 complete -F _cf-cli cf7
 complete -F _cf-cli cf
     completion
-    doc.install 'LICENSE'
-    doc.install 'NOTICE'
+    doc.install "LICENSE"
+    doc.install "NOTICE"
   end
 
   test do
