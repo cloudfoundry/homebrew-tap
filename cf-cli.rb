@@ -14,8 +14,6 @@ class CfCli < Formula
     sha256 '09664d1469fb8a0ddba804343121aba7d8f64ba6bfde75a53f6e29d6600b2342'
   end
 
-  depends_on :arch => :x86_64
-
   def install
     bin.install 'cf'
     (bash_completion/"cf-cli").write <<-completion
