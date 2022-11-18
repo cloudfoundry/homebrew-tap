@@ -11,7 +11,6 @@ class Bbl < Formula
     sha256 "e2d3e69bf4479495cbce44dc8f5cdf28cb0c99f9d5815c3cbf2344d4b27677d6"
   end
 
-  depends_on :arch => :x86_64
   depends_on "terraform" => "0.11.0"
   depends_on "cloudfoundry/tap/bosh-cli" => "2.0.48"
 

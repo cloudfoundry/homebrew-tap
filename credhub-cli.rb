@@ -11,8 +11,6 @@ class CredhubCli < Formula
     sha256 "76fa3f2dcf9f7fa882de2ffbc8b55d9a8bd5c469214c68d1faaa772c72bdd2ae"
   end
 
-  depends_on :arch => :x86_64
-
   def install
     bin.install "credhub"
   end
