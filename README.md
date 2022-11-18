@@ -6,7 +6,7 @@ To install a package:
 
 ```
 brew tap cloudfoundry/tap
-brew install <cf-cli | bosh-init | bosh-cli | credhub-cli | bbl | bbr | uaa-cli>
+brew install <bbl | bbr | bosh-cli | cf-cli | credhub-cli | uaa-cli>
 ```
 
 Available packages:
