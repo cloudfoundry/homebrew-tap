@@ -1,0 +1,26 @@
+---
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: 	macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        formulae:
+          [
+            bbl,
+            bbr,
+            cf-cli,
+            cf-cli@6,
+            cf-cli@7,
+            cf-cli@8,
+            credhub-cli,
+            uaa-cli,
+          ]
+    steps:
+      - uses: actions/checkout@v3
+      - run: brew tap cloudfoundry/tap "file://${PWD}"
+      - run: brew install  ${{ matrix.formulae }}
