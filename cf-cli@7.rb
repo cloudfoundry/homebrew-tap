@@ -1,19 +1,19 @@
 class CfCliAT7 < Formula
   desc     "Cloud Foundry CLI"
   homepage "https://code.cloudfoundry.org/cli"
-  version  "7.6.0"
+  version  "7.7.1"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://packages.cloudfoundry.org/homebrew?arch=macosarm&version=7.6.0"
-      sha256 "2041934af56fde366b467d43a58a70e6dafd8aa66ed9734917c82ca1ae04153e"
+      url "https://packages.cloudfoundry.org/homebrew?arch=macosarm&version=7.7.1"
+      sha256 "e275999a668ac06a34ce3bb949d75833a8a4706a33e661608746bab0b6fe81b3"
     elsif
-      url "https://packages.cloudfoundry.org/homebrew?arch=macosx64&version=7.6.0"
-      sha256 "cf2984cdf84f5f1e64be0b7bc38e46517a447bdd403506dcd0d55db48d6128dc"
+      url "https://packages.cloudfoundry.org/homebrew?arch=macosx64&version=7.7.1"
+      sha256 "5ece055955a2935d89e113249a2e2684fb88c36b9a764730f62b5151c1b36088"
     end
   elsif OS.linux?
-    url "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.6.0&source=homebrew"
-    sha256 "32824fcf1df0f5845f8cbdb396789599817f69aeb16e8071b5aff8ecab706adc"
+    url "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.7.1&source=homebrew"
+    sha256 "330d104ae85d2b873e3bfafaf28787e8d674b959ada69763f73ddf45a2fcc045"
   end
 
   def install
