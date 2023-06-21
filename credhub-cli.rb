@@ -1,14 +1,14 @@
 class CredhubCli < Formula
   desc "CredHub CLI"
   homepage "https://github.com/cloudfoundry/credhub-cli"
-  version "2.9.16"
+  version "2.9.17"
 
   if OS.mac?
-    url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.16/credhub-darwin-2.9.16.tgz"
-    sha256 "1117da40156842f9044013bf28614b88b2f6b5e05ca306d00a23acddb2042015"
+    url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.17/credhub-darwin-2.9.17.tgz"
+    sha256 "b7237997089b8f1c17bb040ad13a8df7cdccf6ba2b0960240246684a70603ef8"
   elsif OS.linux?
-    url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.16/credhub-linux-2.9.16.tgz"
-    sha256 "ef37b139ee6e588cc32bc550fbe3be36d1430085347fab2b1629c1f4af5cc04f"
+    url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.17/credhub-linux-2.9.17.tgz"
+    sha256 "a62c5d4dd7f997fad27543ee2f72e40f4c5114448da42ab839702d4deca97662"
   end
 
   depends_on :arch => :x86_64
