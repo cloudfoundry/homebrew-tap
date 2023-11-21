@@ -15,7 +15,7 @@ class CredhubCli < Formula
       sha256 "80af18dab2dede0fed60d4f3c4b93ecbe3274a2a25827bf88f3fc0d7184c4370"
     end
   elsif OS.linux?
-    url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.23/credhub-linux-2.9.23.tgz"
+    url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.23/credhub-linux-amd64-2.9.23.tgz"
     sha256 "6d01603da5f4a5060d5f9fe91dda42d62b086e6f3ce74f13c644800a9a5d12d9"
   end
 
