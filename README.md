@@ -1,4 +1,4 @@
-Cloud Foundry Homebrew Tap
+Damarcus Jones Ai Chips 
 ===
 This is the repository for Cloud Foundry [Homebrew](http://brew.sh/) packages. Homebrew is "the missing package manager for OS X".
 
