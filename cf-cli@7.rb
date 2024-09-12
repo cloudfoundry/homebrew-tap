@@ -6,14 +6,14 @@ class CfCliAT7 < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://packages.cloudfoundry.org/homebrew?arch=macosarm&version=7.7.13"
-      sha256 "86960898129057a47f84024415832fbe190ea7ef5f0599d40bdc0d72498397bd"
+      sha256 "178794218ace34610841d7f204e6bc4d1184e4f01419a257a62d3fe19631200a"
     elsif
       url "https://packages.cloudfoundry.org/homebrew?arch=macosx64&version=7.7.13"
-      sha256 "d6d606ee697030419850a9851806dd272d9842f54a0625e7afa0ccbb75e2a896"
+      sha256 "269035c57e3b6a728978f6b1138a2938c0f939438061bd90b1f1e8ca040ba4de"
     end
   elsif OS.linux?
     url "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.7.13&source=homebrew"
-    sha256 "1b68f73121a63abafc9f20775e9f6bd9b8971d8a3aa4b65165a4d983c2b7ea24"
+    sha256 "4553d9a39c52cb5e8db97b46c8b8a47cf1d61845eecd5b7b7b6079bfe1a1051e"
   end
 
   def install
