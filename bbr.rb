@@ -7,15 +7,15 @@ class Bbr < Formula
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cloudfoundry/bosh-backup-and-restore/releases/download/v1.9.73/bbr-1.9.73-darwin-arm64"
-      sha256 "dca4174bada182c57a4a0fec486655665295dd68c05288e1553f24afe59ea6e7"
+      url "https://github.com/cloudfoundry/bosh-backup-and-restore/releases/download/v1.9.74/bbr-1.9.74-darwin-arm64"
+      sha256 "61fd29897c6fbe88d59e773809661fef598eea25e7e0ec4689de3b0310fbe808"
     else
-      url "https://github.com/cloudfoundry/bosh-backup-and-restore/releases/download/v1.9.73/bbr-1.9.73-darwin-amd64"
-      sha256 "dca4174bada182c57a4a0fec486655665295dd68c05288e1553f24afe59ea6e7"
+      url "https://github.com/cloudfoundry/bosh-backup-and-restore/releases/download/v1.9.74/bbr-1.9.74-darwin-amd64"
+      sha256 "f2530ed06b96b637f74883789d1b352881dbfe76407ac5db1edc5ba27d709d87"
     end
   elsif OS.linux?
-    url "https://github.com/cloudfoundry/bosh-backup-and-restore/releases/download/v1.9.73/bbr-1.9.73-linux-amd64"
-    sha256 "7cc6b87ccb6c796e8c26d6cd840f82a9f00892c16a0e23a0e5bb214443f71c6c"
+    url "https://github.com/cloudfoundry/bosh-backup-and-restore/releases/download/v1.9.74/bbr-1.9.74-linux-amd64"
+    sha256 "3f7002a1a1e514f0910dc7ebda158ac09ab0c4598f0c8c3f5da70be4627ca564"
   end
 
   def install
@@ -23,12 +23,12 @@ class Bbr < Formula
 
     if OS.mac?
       if Hardware::CPU.arm?
-        bin.install "bbr-1.9.73-darwin-arm64" => binary_name
+        bin.install "bbr-1.9.74-darwin-arm64" => binary_name
       else
-        bin.install "bbr-1.9.73-darwin-amd64" => binary_name
+        bin.install "bbr-1.9.74-darwin-amd64" => binary_name
       end
     elsif OS.linux?
-      bin.install "bbr-1.9.73-linux-amd64" => binary_name
+      bin.install "bbr-1.9.74-linux-amd64" => binary_name
     end
   end
 
