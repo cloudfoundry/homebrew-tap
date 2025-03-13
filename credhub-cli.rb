@@ -4,19 +4,19 @@
 class CredhubCli < Formula
   desc "CredHub CLI"
   homepage "https://github.com/cloudfoundry/credhub-cli"
-  version "2.9.43"
+  version "2.9.44"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.43/credhub-darwin-arm64-2.9.43.tgz"
-      sha256 "da6f4a81c356e6a22996bdd8a9fe84d8c8ed96b36c9005fc2bd1d3635e2788de"
+      url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.44/credhub-darwin-arm64-2.9.44.tgz"
+      sha256 "6f70cd9f16599f30a48d8e7e1ea803ee2389f1ceb23b018e621d7e537662a88f"
     else
-      url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.43/credhub-darwin-amd64-2.9.43.tgz"
-      sha256 "c1ce74b8366c995b34b80135cf89607e6e75f6fdcca4a1d0a2834d71250a1253"
+      url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.44/credhub-darwin-amd64-2.9.44.tgz"
+      sha256 "3c55df71aac2e0d77482bb909a89803f3d9b4b4fc1082dd9ff6636f1f3b1250e"
     end
   elsif OS.linux?
-    url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.43/credhub-linux-amd64-2.9.43.tgz"
-    sha256 "7a7edcf4b9a7c1dd49d695cecc105bfa15faa489adc9f1c96fa9fd87b7d10b46"
+    url "https://github.com/cloudfoundry/credhub-cli/releases/download/2.9.44/credhub-linux-amd64-2.9.44.tgz"
+    sha256 "6fc2f717c5ce074141b35ab0fd89e1eb6b190e5f20fe31536a782764510ac5b1"
   end
 
   def install
