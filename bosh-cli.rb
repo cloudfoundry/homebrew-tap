@@ -1,19 +1,19 @@
 class BoshCli < Formula
   desc "BOSH CLI"
   homepage "https://bosh.io/docs/cli-v2.html"
-  version "7.9.6"
+  version "7.9.7"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://storage.googleapis.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-arm64"
-      sha256 "33c5d98b7f8a19e38ff0db97ab8115345efcef618b833b054aa4a9d72959c785"
+      sha256 "e644ed9500a9a6d94b1a6dfe9ee8bf19410d5441bef4fd067ff11e2850d2fc43"
     else
       url "https://storage.googleapis.com/bosh-cli-artifacts/bosh-cli-#{version}-darwin-amd64"
-      sha256 "8d71baba968c54a516ba52d88b2b588d6b0ab6e6e49a24f96de8184651a16011"
+      sha256 "4c22dd7a274e8aea9a51bdf0fa9680aa448017960fbb8f4e5610ae7804ac09f6"
     end
   elsif OS.linux?
     url "https://storage.googleapis.com/bosh-cli-artifacts/bosh-cli-#{version}-linux-amd64"
-    sha256 "db596057337526f384103f4cb5b88e12bea9653e9951b291acdf25e97638f26f"
+    sha256 "895c70b81d644a43b39233b3d0dc0aa15c8a612f0a1c66f42462b82b70c50cbe"
   end
 
   option "with-bosh2", "Rename binary to 'bosh2'. Useful if the old Ruby CLI is needed."
