@@ -4,14 +4,14 @@ This is the repository for Cloud Foundry [Homebrew](http://brew.sh/) packages. H
 
 ## Available packages:
 
-| Package        | Type    | Description                              |
-|:---------------|:--------|:-----------------------------------------|
-| cf-cli@{6,7,8} | formula | The official Cloud Foundry CLI           |
-| bosh-cli       | formula | The official new BOSH CLI                |
-| credhub-cli    | formula | The official CredHub CLI                 |
-| bbl            | formula | The official bosh-bootloader CLI         |
-| bbr            | formula | The official BOSH Backup and Restore CLI |
-| uaa-cli        | cask    | CLI for UAA, written in Go               |
+| Package           | Type    | Description                              |
+|:------------------|:--------|:-----------------------------------------|
+| cf-cli\[@{6,7,8}] | formula | The official Cloud Foundry CLI           |
+| bosh-cli          | formula | The official new BOSH CLI                |
+| credhub-cli       | formula | The official CredHub CLI                 |
+| bbl               | formula | The official bosh-bootloader CLI         |
+| bbr               | formula | The official BOSH Backup and Restore CLI |
+| uaa-cli           | cask    | CLI for UAA, written in Go               |
 
 ## Installation
 
@@ -20,7 +20,7 @@ This is the repository for Cloud Foundry [Homebrew](http://brew.sh/) packages. H
 Most packages are available as formula, which can be installed with:
 
 ```bash
-brew install --formula cloudfoundry/tap/<bbl | bbr | bosh-cli | cf-cli@8 | cf-cli@7 | cf-cli@6 | cf-cli  |credhub-cli >
+brew install --formula cloudfoundry/tap/{bbl,bbr,bosh-cli,cf-cli@8,cf-cli@7,cf-cli@6,cf-cli,credhub-cli}
 ```
 
 ### To install a package, via Cask:
@@ -38,7 +38,7 @@ brew uninstall --force uaa-cli
 
 ## Install All Packages
 
-To install all packages, run:
+To install all (latest) packages, run:
 
 ```bash
 brew trust cloudfoundry/tap
