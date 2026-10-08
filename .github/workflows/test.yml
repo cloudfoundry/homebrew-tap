@@ -21,8 +21,11 @@ jobs:
           ]
     steps:
       - uses: actions/checkout@v3
+        with:
+          path: homebrew-tap
       - run: |
-          brew tap cloudfoundry/tap .
+          brew tap cloudfoundry/tap
+          cp homebrew-tap/*.rb $(brew --repository cloudfoundry/tap)/
           brew install --formula cloudfoundry/tap/${{ matrix.formulae }}
 
   test-cask:
@@ -36,6 +39,10 @@ jobs:
           ]
     steps:
       - uses: actions/checkout@v3
+        with:
+          path: homebrew-tap
       - run: |
-          brew tap cloudfoundry/tap .
+          brew tap cloudfoundry/tap
+          cp homebrew-tap/*.rb $(brew --repository cloudfoundry/tap)/
+          cp homebrew-tap/Casks/*.rb $(brew --repository cloudfoundry/tap)/Casks/
           brew install --cask cloudfoundry/tap/${{ matrix.cask }}
