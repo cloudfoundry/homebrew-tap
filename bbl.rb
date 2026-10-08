@@ -6,18 +6,18 @@ class Bbl < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_osx_arm64"
-      sha256 "c2c986fa97b501973217b4a868414a8c65698290b893480c86c610c04439c880"
+      sha256 "2f5b3b004be3aa757d21b0e59afb5e8d82c2791cec3df1dd118110da16ae9bc1"
     else
       url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_osx_amd64"
-      sha256 "6ffe08e7e5bd3b1b0c7dadd82e4cd2744c16ebb97b4186bd9f9f17078fb11cb7"
+      sha256 "c1c6f6d84160a00462afd1ee2a7932d6752c870141a742dee7e0fcec1fd15628"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_linux_arm64"
-      sha256 "fcabb588abcdbe63c3cb63c5ffbb2d340956a671a1fd09e1031ce3dc7ad5a547"
+      sha256 "f2c524701bd190c5f3e0476249208745ede59c3795e5083e7618962f5bf51d63"
     else
       url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_linux_amd64"
-      sha256 "af74aa78ee134258c008dc0f90d47ba75ae5604ad0ee5679c38cc30fcaa1edf9"
+      sha256 "3caf9954951dc2d81e530d09b25acf876aeb2bccc079e3c92e9e9860695361cf"
     end
   end
 
