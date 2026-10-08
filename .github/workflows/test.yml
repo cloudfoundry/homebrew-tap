@@ -20,8 +20,16 @@ jobs:
             uaa-cli,
           ]
     steps:
-      - uses: actions/checkout@v3
-      - run: brew install --formula cloudfoundry/tap/${{ matrix.formulae }}
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: homebrew-tap
+      - name: Install formula
+        run: |
+          brew tap cloudfoundry/tap
+          cp -r homebrew-tap/. $(brew --repository cloudfoundry/tap)/
+          brew trust cloudfoundry/tap
+          brew install --formula cloudfoundry/tap/${{ matrix.formulae }}
 
   test-cask:
     runs-on: 	macos-latest
@@ -33,5 +41,13 @@ jobs:
             uaa-cli
           ]
     steps:
-      - uses: actions/checkout@v3
-      - run: brew install --cask cloudfoundry/tap/${{ matrix.cask }}
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: homebrew-tap
+      - name: Install cask
+        run: |
+          brew tap cloudfoundry/tap
+          cp -r homebrew-tap/. $(brew --repository cloudfoundry/tap)/
+          brew trust cloudfoundry/tap
+          brew install --cask cloudfoundry/tap/${{ matrix.cask }}
