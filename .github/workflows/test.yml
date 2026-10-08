@@ -21,7 +21,9 @@ jobs:
           ]
     steps:
       - uses: actions/checkout@v3
-      - run: brew install --formula ./${{ matrix.formulae }}.rb
+      - run: |
+          brew tap cloudfoundry/tap .
+          brew install --formula cloudfoundry/tap/${{ matrix.formulae }}
 
   test-cask:
     runs-on: 	macos-latest
@@ -34,4 +36,6 @@ jobs:
           ]
     steps:
       - uses: actions/checkout@v3
-      - run: brew install --cask ./Casks/${{ matrix.cask }}.rb
+      - run: |
+          brew tap cloudfoundry/tap .
+          brew install --cask cloudfoundry/tap/${{ matrix.cask }}
