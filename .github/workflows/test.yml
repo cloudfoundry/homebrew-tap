@@ -17,7 +17,6 @@ jobs:
             cf-cli,
             cf-cli@8,
             credhub-cli,
-            uaa-cli,
           ]
     steps:
       - name: Checkout
