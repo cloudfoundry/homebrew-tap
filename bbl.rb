@@ -1,23 +1,23 @@
 class Bbl < Formula
   desc "Command line utility for standing up a BOSH director on an IAAS of your choice."
   homepage "https://github.com/cloudfoundry/bosh-bootloader"
-  version "v9.0.52"
+  version "v9.0.53"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_osx_arm64"
-      sha256 "d692730e8e60b85afe7bc93cbddb9375c7e755a9729fd2b9d6cfa7217d8e62f1"
+      sha256 "f78cbb19c1d5c57218a96befc87dab721491c341f2add1dcb2707575b3e34a6a"
     else
       url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_osx_amd64"
-      sha256 "c9e4211b902a6edd14d4efd871c2f6a02715e1fd757d9d0ac7ac3b47d43e0fa2"
+      sha256 "1ef11ce71d511e41a2609287d8d68a55852d62357f6ee0b6c9a1dc441df37734"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_linux_arm64"
-      sha256 "02b26d7d46cf28487c0543fbf2a430b4aab2a23c09f7dda900b5d16fac4cd3fc"
+      sha256 "6d567e9613d7342cd92eacfab0ac9bbe9f110df14ea382bb6c232063d9eaf527"
     else
       url "https://github.com/cloudfoundry/bosh-bootloader/releases/download/#{version}/bbl-#{version}_linux_amd64"
-      sha256 "4969e868c9eeed2cd3c942bfb25038d14423936a7257a336228295eab9ca0369"
+      sha256 "b3a7466c3c1aa1a599c3063fb30f8276a0bca4f27be00807e069094ab585678b"
     end
   end
 
