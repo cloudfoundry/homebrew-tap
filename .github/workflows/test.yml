@@ -5,7 +5,7 @@ on:
 
 jobs:
   test-formula:
-    runs-on: 	macos-latest
+    runs-on: macos-latest
     strategy:
       fail-fast: false
       matrix:
@@ -13,11 +13,10 @@ jobs:
           [
             bbl,
             bbr,
+            bosh-cli,
             cf-cli,
-            cf-cli@7,
             cf-cli@8,
             credhub-cli,
-            uaa-cli,
           ]
     steps:
       - name: Checkout
@@ -32,7 +31,7 @@ jobs:
           brew install --formula cloudfoundry/tap/${{ matrix.formulae }}
 
   test-cask:
-    runs-on: 	macos-latest
+    runs-on: macos-latest
     strategy:
       fail-fast: false
       matrix:
